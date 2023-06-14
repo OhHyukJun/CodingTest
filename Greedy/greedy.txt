@@ -1,0 +1,33 @@
+그리디 알고리즘은 현재 상태에서 보는 선택지 중 최선의 선택지가 전체 중에 최선이라고 가정하는 알고리즘
+
+1. 해 선택: 현재 상태에서 최선이라고 생각되는 해
+2. 적절성 검사: 현재 선택한 해가 전체 문제의 제약 조건에 벗어나는가를 검사
+3. 해 검사: 현재까지 선택한 해 집합이 전체 문제를 해결할 수 있는지 검사 -> 해결이 안되면 다시 1의 과정에서 반복
+
+우선순위 큐를 자주 사용함 
+파이썬에서 우선순위 큐를 사용하는 방법
+1. PriorityQueue
+
+    from queue import PriorityQueue
+
+    <생성 방법>
+    myque = PriorityQueue() #우선순위 큐를 생성
+
+    <기본 함수>
+    put(data) #원소 추가
+    get() #큐에서 데이터 꺼내기
+    qsize() #큐 사이즈 가져오기
+    empty() #큐가 비어 있는지 확인
+
+2. heapq
+
+    import heapq
+
+    <생성 방법>
+    mylist = [] #리스트 생성
+    heapq.heappush(mylist, 1) #리스트에 데이터를 넣을 때 heappq를 이용하여 저장
+
+    <기본 함수>
+    heappush(mylist, data) #data를 list(heap 자료구조) 형태로 저장
+    heappop(mylist) #list(heap 자료구조)에서 데이터 꺼내기
+    heapify(mylist) #일반적인 list를 heap 자료구조로 변환
