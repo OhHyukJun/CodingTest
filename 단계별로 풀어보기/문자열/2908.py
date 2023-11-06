@@ -1,7 +1,7 @@
-R, S = input().split()
-N = int(str(R)[::-1])
-K = int(str(S)[::-1])
-if N >K:
+S,R = input().split()
+N = int(str(S)[::-1])
+T = int(str(R)[::-1])
+if(N>T):
     print(N)
 else:
-    print(K)
+    print(T)
