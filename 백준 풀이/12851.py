@@ -13,6 +13,9 @@ def bfs():
     while queue:
         X, time = queue.popleft()
 
+        if min_time != None and time > min_time:
+            continue
+
         if X == K:
             if min_time == None:
                 min_time = time
