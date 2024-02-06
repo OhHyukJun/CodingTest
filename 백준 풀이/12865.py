@@ -36,12 +36,11 @@ List = []
 for i in range(1,len(W_arr)+1):
     for temp in itertools.combinations(W_arr, i):
         if sum(temp) <= K:
-            L = len(list(temp))
-            for i in range(L):
-                List.append(arr[temp[i]])
-            #List.append(list(temp))
-        
+            values = [arr[weight] for weight in temp]  # temp의 각 요소에 해당하는 가치를 리스트로 만듦
+            if len(temp) == 1:
+                List.extend(values)  # values 리스트 전체를 List에 추가
+            else: List.append(sum(values))
 
-print(List)
+print(max(List))
 
 
