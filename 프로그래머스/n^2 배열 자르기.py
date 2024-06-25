@@ -13,3 +13,4 @@ def solution(n, left, right):
             #print(i//n+1)
         
     return answer
+
