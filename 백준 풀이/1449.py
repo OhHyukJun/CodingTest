@@ -9,4 +9,5 @@ for i in arr[1:]:
     else:
         left = i
         tape_count+=1
+        
 print(tape_count)
